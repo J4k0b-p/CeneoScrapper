@@ -1,3 +1,23 @@
 {% extends 'main.html' %} {% block content %}
-<h1>Extraction view</h1>
+<div class="extraction-container text-bg-dark shadow-sm rounded-4" style="min-height: 60vh; min-width: 60vw">
+  <div class="wrapper m-5">
+    <h2>Extraction</h2>
+    <form action="{{ url_for('handle_submit') }}" method="post">
+      <div class="mb-3">
+        <label for="extractionInput" class="form-labe text-white fs-4 pt-3 pb-2">
+          Using field below enter product ID you want to extract data.
+        </label>
+        <input
+          type="text"
+          class="form-control mt-2 mb-3"
+          id="extractionInput"
+          name="extractionInput"
+          placeholder="Product ID"
+          style="max-width: 20vw"
+        />
+      </div>
+      <button type="submit" class="btn btn-light mt-5">Extract !</button>
+    </form>
+  </div>
+</div>
 {% endblock %}
