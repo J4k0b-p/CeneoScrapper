@@ -1,4 +1,5 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect,flash
+from utils import scrapper
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,9 +13,7 @@ def render_extraction_template():
 @app.route('/submit', methods=['POST'])
 def handle_submit():
     product_id = request.form['extractionInput']
-    print(product_id)
-    return redirect("https://www.ceneo.pl/149239580")
-   #TO DO - Change this redirect to try catch
+    return scrapper.get_data(product_id)
 
 if __name__ == '__main__':
     app.run(debug=True)
