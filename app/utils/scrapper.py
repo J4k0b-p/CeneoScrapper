@@ -20,7 +20,7 @@ def get_data(product_id):
     return redirect(f"https://www.ceneo.pl/{product_id}")
 
 def process(product_id,response):
-    main_info = get_main_product_info(response)
+    main_info = get_main_product_info(product_id,response)
     amount_of_pages = main_info["user_reviews_pages_amount"]
     main_info["reviews"] = []
     for i in range(1,amount_of_pages +1):
@@ -29,18 +29,22 @@ def process(product_id,response):
 
     append_product(main_info)
 
-def get_main_product_info(response):
+def get_main_product_info(product_id,response):
     product_structure = {}
 
     soup = BeautifulSoup(response.content, 'html.parser')
-    product_name_div = soup.find('div', class_ = 'product-top__title')
+    product_name_div = soup.find('div', class_ = 'product-top__title').text
     reviews_amount = soup.find('div', class_ = 'score-extend__review').text
-    reviews_score_span = soup.find('span', class_ = 'product-review__score')  
+    reviews_score_span = soup.find('span', class_ = 'product-review__score') 
+    product_el = soup.find('img', class_ = "js_gallery-media gallery-carousel__media")
+    product_image_src = product_el['src']
     reviews = reviews_amount.split()
 
-    product_structure["product_name"] = product_name_div.text,
-    product_structure["reviews_amount"] = reviews[0],
-    product_structure["reviews_avg_score"] = reviews_score_span.get('content', None),
+    product_structure["product_name"] = product_name_div
+    product_structure["product_id"] = product_id
+    product_structure["product_image_src"] = product_image_src
+    product_structure["reviews_amount"] = reviews[0]
+    product_structure["reviews_avg_score"] = reviews_score_span.get('content', None)
     product_structure["user_reviews_pages_amount"] =  get_reviews_pages_amount(reviews[0])
 
     return product_structure
