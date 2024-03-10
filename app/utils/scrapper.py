@@ -14,7 +14,7 @@ def get_data(product_id):
         return redirect("/extraction")
     elif response.status_code == 200:
         get_main_product_info(response)
-        get_reviews_from_page(product_id,1)
+        get_reviews_from_page(product_id,2)
 
     return redirect(f"https://www.ceneo.pl/{product_id}")
 
@@ -67,36 +67,30 @@ def get_reviews_from_page(product_id, page):
 
             user_review = review.find('div', class_ = "user-post__text").text
 
-            cons_pros_lists = soup.findAll('div', class_="review-feature__col")
+            review_feature_col = review.findAll('div', class_="review-feature__col")
             
-            # ceneo devs no brainer
-            # extracting lists to fix
             try:
-                cons_list_test = cons_pros_lists[0]
-                is_cons_check = bool(cons_list_test.find('div', class_='review-feature__title review-feature__title--positives', text='Zalety'))
-                # check if first element is cons list 
-                if(is_cons_check is not None):
-                    cons_divs =  cons_list_test.findAll('div', class_='review-feature__item')
-                    cons_list = [div.text for div in cons_divs ]
-                else:
-                    #first element is pros list
-                    pros_list = cons_pros_lists[0]
-                    pros_divs =  pros_list.findAll('div', class_='review-feature__item')
-                    pros_list = [div.text for div in pros_divs ]
-
-                #case when they are cons and pros
-                pros_list = cons_pros_lists[1]
-                pros_divs =  pros_list.findAll('div', class_='review-feature__item')
-                pros_list = [div.text for div in pros_divs ]
-                
+                cons_list, pros_list = [], []
+                if len(review_feature_col) == 1:
+                    is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
+                    if is_pros_check:
+                        pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
+                        pros_list = [div.text for div in pros_divs ]
+                    else:
+                        cons_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
+                        cons_list = [div.text for div in cons_divs ]
+                elif len(review_feature_col) == 2:
+                    is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
+                    if is_pros_check:
+                        pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
+                        pros_list = [div.text for div in pros_divs ]
+                        cons_divs =  review_feature_col[1].findAll('div', class_='review-feature__item')
+                        cons_list = [div.text for div in cons_divs ]
             except:
-                cons_list = []
-                pros_list = []
-            
-            print(pros_list)
+                # There is no cons_pros_list element
+                pass
 
-            cons_list = []
-            pros_list = []
+            print(f"Pros for product:{pros_list} ----- cons for product: {cons_list}")
 
 
 
