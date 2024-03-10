@@ -10,6 +10,10 @@ def render_main_template():
 def render_extraction_template():
     return render_template('extraction.html')
 
+@app.route('/products')
+def render_products_template():
+    return render_template('products.html')
+
 @app.route('/submit', methods=['POST'])
 def handle_submit():
     product_id = request.form['extractionInput']
