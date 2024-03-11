@@ -93,22 +93,28 @@ def get_reviews_from_page(product_id, page):
             review_feature_col = review.findAll('div', class_="review-feature__col")
             
             try:
+                cons_total = 0
+                pros_total = 0
                 cons_list, pros_list = [], []
                 if len(review_feature_col) == 1:
                     is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
                     if is_pros_check:
                         pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
                         pros_list = [div.text for div in pros_divs ]
+                       
                     else:
                         cons_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
                         cons_list = [div.text for div in cons_divs ]
+                        
                 elif len(review_feature_col) == 2:
                     is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
                     if is_pros_check:
                         pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
                         pros_list = [div.text for div in pros_divs ]
+                        
                         cons_divs =  review_feature_col[1].findAll('div', class_='review-feature__item')
                         cons_list = [div.text for div in cons_divs ]
+                        
             except:
                 # There is no cons_pros_list element
                 pass
@@ -125,7 +131,7 @@ def get_reviews_from_page(product_id, page):
                 "not_helpful_count": not_helpful_count,
                 "content": user_review,
                 "cons": cons_list,
-                "pros": pros_list
+                "pros": pros_list,
             }
 
             reviews.append(review_structure)
@@ -139,6 +145,12 @@ def append_product(new_product):
             data = json.load(file)
     else:
         data['products'] = []
+
+    #calculate total cons and pros per product
+    total_pros = sum(len(review['pros']) for review in new_product['reviews'])
+    total_cons = sum(len(review['cons']) for review in new_product['reviews'])
+    new_product['total_pros'] = total_pros
+    new_product['total_cons'] = total_cons
 
     data['products'].append(new_product)
 
