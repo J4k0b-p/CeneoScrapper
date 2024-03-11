@@ -1,72 +1,49 @@
 {% extends 'main.html' %} {% block content %}
 <div class="products-wrapper" style="min-height: 90%; min-width: 90%">
   <div class="album py-5">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm text-bg-dark">
-            <svg
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: Thumbnail"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            </svg>
-            <div class="card-body">
-              <h3 class="">Samsung</h3>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content
-                is a little bit longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Json</button>
-              </div>
-            </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 justify-content-start">
+      {% for product in data['products'] %}
+      <div class="col custom-col">
+        <div class="card fixed-width shadow-sm text-bg-dark">
+          <div class="image-wrapper aspect-ratio-box">
+            <img
+              class="bd-placeholder-img card-img-top d-block mx-auto"
+              src="https:{{ product['product_image_src'] }}"
+              alt="{{ product['product_name'].strip()  }}"
+            />
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm text-bg-dark">
-            <svg
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: Thumbnail"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            </svg>
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content
-                is a little bit longer.
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Json</button>
+          <div class="card-body">
+            <h3 class="card-title">{{ product['product_name'].strip() }}</h3>
+            <p class="card-text">
+              This product has an average review score of {{ product['reviews_avg_score'] }} based on {{
+              product['reviews_amount'] }} reviews.
+            </p>
+            <div class="cons_pros d-flex pb-2 pt-4">
+              <img
+                src="{{ url_for('static', filename='/images/plus.png') }}"
+                width="24"
+                height="24"
+                class="bi pe-none me-2"
+              />
+              <p class="me-2">{{ product['total_pros'] }}</p>
+              <img
+                src="{{ url_for('static', filename='/images/minus.png') }}"
+                width="24"
+                height="24"
+                class="bi pe-none me-2"
+              />
+              <p class="me-2">{{ product['total_cons'] }}</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
               </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Json</button>
             </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
