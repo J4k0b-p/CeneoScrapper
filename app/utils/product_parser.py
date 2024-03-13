@@ -10,4 +10,8 @@ def load_data():
     
     return data
 
+def get_product_data():
+    data = ""
+    return data
+
 

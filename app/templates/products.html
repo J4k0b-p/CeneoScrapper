@@ -3,7 +3,7 @@
   <div class="album py-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 justify-content-start">
       {% for product in data['products'] %}
-      <div class="col custom-col">
+      <div class="col custom-col" id="{{ product['product_id'] }}">
         <div class="card fixed-width shadow-sm text-bg-dark">
           <div class="image-wrapper aspect-ratio-box">
             <img
@@ -38,7 +38,13 @@
               <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
               </div>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Json</button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary"
+                onclick="window.location.href='/data-download'"
+              >
+                Json
+              </button>
             </div>
           </div>
         </div>
