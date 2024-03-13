@@ -1,18 +1,21 @@
-import requests
-import math
-from flask import redirect
+import requests, math, json, os
+from flask import redirect, flash
 from bs4 import BeautifulSoup
-import json
-import os
+
 
 
 def get_data(product_id):
+
+    if product_id == "":
+        show_error("Product ID can't be empty")
+        return redirect("/extraction")
+    
     url = f"https://www.ceneo.pl/{product_id}#tab=reviews"
     response = requests.get(url)
 
+    print(response.status_code)
     if response.status_code == 500 or response.status_code == 404 :
-        print("This is not valid product ID")
-        #To do : Show alert message
+        show_error("Invalid product ID")
         return redirect("/extraction")
     elif response.status_code == 200:
         process(product_id, response)
@@ -93,8 +96,6 @@ def get_reviews_from_page(product_id, page):
             review_feature_col = review.findAll('div', class_="review-feature__col")
             
             try:
-                cons_total = 0
-                pros_total = 0
                 cons_list, pros_list = [], []
                 if len(review_feature_col) == 1:
                     is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
@@ -157,3 +158,7 @@ def append_product(new_product):
     with open(file_path, 'w',encoding='utf-8') as file:
         json.dump(data, file, ensure_ascii=False, indent=4) 
         file.flush()
+
+
+def show_error(msg):
+    return flash(msg)
