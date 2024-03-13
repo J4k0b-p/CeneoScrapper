@@ -10,8 +10,11 @@ def load_data():
     
     return data
 
-def get_product_data():
-    data = ""
-    return data
+def get_product_data(product_id):
+    data = load_data()
+    for product in data['products']:
+        if product['product_id'] == str(product_id):
+            return product
+
 
 

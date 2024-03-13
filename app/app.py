@@ -23,12 +23,12 @@ def handle_submit():
     product_id = request.form['extractionInput']
     return scrapper.get_data(product_id)
 
-@app.route('/data-download')
+@app.route('/data-download/<product_id>')
 def download_data(product_id):
-    data = {"key": "value"} 
-    response = make_response(json.dumps(data))
+    data = product_parser.get_product_data(product_id)
+    response = make_response(json.dumps(data,ensure_ascii=False, indent=4))
     response.headers['Content-Type'] = 'application/json'
-    response.headers["Content-Disposition"] = "attachment; filename=data.json"
+    response.headers["Content-Disposition"] = f"attachment; filename=data_{product_id}.json"
     return response
 
 if __name__ == '__main__':

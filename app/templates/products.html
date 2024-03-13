@@ -13,7 +13,9 @@
             />
           </div>
           <div class="card-body">
-            <h3 class="card-title">{{ product['product_name'].strip() }}</h3>
+            <a href="https://www.ceneo.pl/{{ product['product_id'] }}" style="text-decoration: none; color: inherit">
+              <h3 class="card-title">{{ product['product_name'].strip() }}</h3>
+            </a>
             <p class="card-text">
               This product has an average review score of {{ product['reviews_avg_score'] }} based on {{
               product['reviews_amount'] }} reviews.
@@ -41,7 +43,7 @@
               <button
                 type="button"
                 class="btn btn-sm btn-outline-secondary"
-                onclick="window.location.href='/data-download'"
+                onclick="window.location.href='/data-download/{{ product['product_id'] }}'"
               >
                 Json
               </button>
