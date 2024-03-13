@@ -22,3 +22,16 @@
   height: 100%;
   object-fit: cover;
 }
+
+.alert-fixed-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #f53a49;
+  color: #721c24;
+  border-color: #c92132;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: auto;
+  max-width: 300px;
+}

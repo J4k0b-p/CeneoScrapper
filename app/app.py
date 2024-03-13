@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect,flash
 from utils import scrapper, product_parser
 app = Flask(__name__)
+app.secret_key = "hd834!#28HDFGjj"
 
 @app.route('/')
 def render_main_template():
@@ -13,8 +14,7 @@ def render_extraction_template():
 @app.route('/products')
 def render_products_template():
     data = product_parser.load_data()
-    total_cons, total_pros = product_parser.get_total_cons_pros(data)
-    return render_template('products.html', data=data, total_cons=total_cons, total_pros=total_pros)
+    return render_template('products.html', data=data)
 
 @app.route('/submit', methods=['POST'])
 def handle_submit():
