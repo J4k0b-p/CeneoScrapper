@@ -1,0 +1,17 @@
+{% extends 'main.html' %}{% block content %}
+<div class="product-container" style="min-height: 85vh; min-width: 80vw">
+  <h2 class="text-white">{{data['product_name']}}</h2>
+  <div class="wrapper m-5"></div>
+  <div>
+    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='/products/'">
+      <img
+        class="bi pe-none me-2"
+        style="width: 24px; height: 24px"
+        src="{{ url_for('static',
+    filename='/images/arrow-left.png') }}"
+      />
+      All products
+    </button>
+  </div>
+</div>
+{% endblock %}

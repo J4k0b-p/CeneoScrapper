@@ -9,16 +9,21 @@ app.secret_key = "hd834!#28HDFGjj"
 def render_main_template():
     return render_template('main.html')
 
-@app.route('/extraction')
+@app.route('/extraction/')
 def render_extraction_template():
     return render_template('extraction.html')
 
-@app.route('/products')
+@app.route('/products/')
 def render_products_template():
     data = product_parser.load_data()
     return render_template('products.html', data=data)
 
-@app.route('/submit', methods=['POST'])
+@app.route('/product/<product_id>/')
+def render_product_template (product_id):
+    data = product_parser.get_product_data(product_id)
+    return render_template('product_details.html', data=data)
+
+@app.route('/submit/', methods=['POST'])
 def handle_submit():
     product_id = request.form['extractionInput']
     return scrapper.get_data(product_id)
