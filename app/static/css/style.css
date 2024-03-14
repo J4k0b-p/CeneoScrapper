@@ -35,3 +35,17 @@
   width: auto;
   max-width: 300px;
 }
+
+.custom-light-table th,
+.custom-light-table td {
+  background-color: #212529; /* White background */
+  color: #fff; /* Bootstrap's default dark gray for text */
+}
+
+.custom-light-table thead th {
+  background-color: #f8f9fa; /* Slightly darker background for the table header */
+}
+.dt-info,
+.dt-search {
+  color: #fff;
+}
