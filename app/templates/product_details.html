@@ -16,8 +16,8 @@
       <tbody>
         {% for review in data['reviews'] %}
         <tr>
-          <td>{{ review.review_id }}</td>
           <td>{{ review.author }}</td>
+          <td>{{ review.review_id }}</td>
           <td>{{ review.recommendation }}</td>
           <td>{{ review.stars }}</td>
           <td>{{ review.review_date }}</td>
