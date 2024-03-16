@@ -1,3 +1,22 @@
 {% extends 'main.html' %}{% block content %}
-<div class="product-container"></div>
+<div class="product-container" style="min-height: 90%; min-width: 90%">
+  <h2 class="mb-5 text-white">Charts for product: {{product_name}}</h2>
+  <div class="row my-5">
+    <div class="col-md-6">{{ dought_div | safe }} {{ dought_script | safe }}</div>
+    <div class="col-md-6">{{ bar_div | safe }} {{ bar_script | safe }}</div>
+  </div>
+  <button
+    type="button"
+    class="btn btn-sm btn-outline-secondary mx-2 mt-5"
+    onclick="window.location.href='/product/{{ product_id }}/'"
+  >
+    <img
+      class="bi pe-none me-2"
+      style="width: 24px; height: 24px"
+      src="{{ url_for('static',
+    filename='/images/arrow-left.png') }}"
+    />
+    Product details
+  </button>
+</div>
 {% endblock %}

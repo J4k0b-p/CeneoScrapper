@@ -1,5 +1,7 @@
-from flask import Flask, request, render_template, redirect,flash, make_response
-from utils import scrapper, product_parser
+from flask import Flask, request, render_template,make_response
+from utils import scrapper, product_parser, charts
+from bokeh.embed import components
+
 import json
 
 app = Flask(__name__)
@@ -47,8 +49,12 @@ def download_reviews(product_id):
 
 @app.route('/product/charts/<product_id>')
 def render_charts_temnplate(product_id):
-    product_id = ""
-    return render_template('product_charts.html', product_id=product_id)
+    product_name = product_parser.get_product_name(product_id)
+    bar_chart = charts.create_bar_chart(product_id)
+    bar_script, bar_div = components(bar_chart)
+    dought_chart = charts.create_doughnut_chart(product_id)
+    dought_script, dought_div = components(dought_chart)
+    return render_template('product_charts.html', product_id=product_id, product_name = product_name, bar_script = bar_script, bar_div = bar_div, dought_script = dought_script, dought_div = dought_div)
 
 if __name__ == '__main__':
     app.run(debug=True)
