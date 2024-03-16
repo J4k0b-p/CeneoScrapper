@@ -21,7 +21,7 @@ def render_products_template():
 @app.route('/product/<product_id>/')
 def render_product_template (product_id):
     data = product_parser.get_product_data(product_id)
-    return render_template('product_details.html', data=data)
+    return render_template('product_details.html', data=data, product_id = product_id)
 
 @app.route('/submit/', methods=['POST'])
 def handle_submit():
@@ -38,17 +38,15 @@ def download_data(product_id):
 
 @app.route('/reviews-download/<product_id>')
 def download_reviews(product_id):
-    # To do create function for reviews extraction from product
-    #data = product_parser.get_product_data(product_id)
-    #response = make_response(json.dumps(data,ensure_ascii=False, indent=4))
-    #response.headers['Content-Type'] = 'application/json'
-    #response.headers["Content-Disposition"] = f"attachment; filename=data_{product_id}.json"
-    response = ""
+    data = product_parser.get_product_reviews(product_id)
+    response = make_response(json.dumps(data,ensure_ascii=False, indent=4))
+    response.headers['Content-Type'] = 'application/json'
+    response.headers["Content-Disposition"] = f"attachment; filename=reviews_{product_id}.json"
     return response
 
 
 @app.route('/product/charts/<product_id>')
-def render_charts_temnplate():
+def render_charts_temnplate(product_id):
     product_id = ""
     return render_template('product_charts.html', product_id=product_id)
 
