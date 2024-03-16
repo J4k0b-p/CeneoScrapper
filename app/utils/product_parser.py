@@ -15,6 +15,10 @@ def get_product_data(product_id):
     for product in data['products']:
         if product['product_id'] == str(product_id):
             return product
+        
+def get_product_reviews(product_id):
+    product = get_product_data(product_id)
+    return product['reviews']
 
 
 
