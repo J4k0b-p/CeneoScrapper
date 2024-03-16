@@ -71,6 +71,7 @@ def extract_reviews_from_page(product_id, page):
             except:
                 recomendation = ""
             score = review.find('span', class_ = "user-post__score-count").text
+            rate = score.split('/')[0].replace(",",".")
             try:
                 purchase_confirmation = bool(review.find('div', class_ = "review-pz").find("em").text)
             except:
@@ -123,7 +124,7 @@ def extract_reviews_from_page(product_id, page):
                 "review_id": review_id,
                 "author": author_name,
                 "recommendation": recomendation,
-                "stars": score,
+                "rate": rate,
                 "is_purchase_confirmed": purchase_confirmation,
                 "review_date": reviev_date,
                 "purchase_date": purchase_date,
