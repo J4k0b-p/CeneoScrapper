@@ -1,8 +1,7 @@
-import requests, math, json, os
+import requests, math
+from utils import product_parser
 from flask import redirect, flash
 from bs4 import BeautifulSoup
-
-
 
 def get_data(product_id):
 
@@ -18,21 +17,21 @@ def get_data(product_id):
         show_error("Invalid product ID")
         return redirect("/extraction")
     elif response.status_code == 200:
-        process(product_id, response)
+        extract_all_data(product_id, response)
 
     return redirect(f"https://www.ceneo.pl/{product_id}")
 
-def process(product_id,response):
-    main_info = get_main_product_info(product_id,response)
+def extract_all_data(product_id,response):
+    main_info = extract_main_product_info(product_id,response)
     amount_of_pages = main_info["user_reviews_pages_amount"]
     main_info["reviews"] = []
     for i in range(1,amount_of_pages +1):
-        reviews_from_page = get_reviews_from_page(product_id, i)
+        reviews_from_page = extract_reviews_from_page(product_id, i)
         main_info["reviews"].extend(reviews_from_page) 
 
-    append_product(main_info)
+    product_parser.append_product(main_info)
 
-def get_main_product_info(product_id,response):
+def extract_main_product_info(product_id,response):
     product_structure = {}
 
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -57,7 +56,7 @@ def get_reviews_pages_amount(amount):
     return math.ceil(int(amount) / 10)
 
 #spaghetti code  -- REFACTOR NEEDED
-def get_reviews_from_page(product_id, page):
+def extract_reviews_from_page(product_id, page):
     reviews = []
     url = f"https://www.ceneo.pl/{product_id}/opinie-{page}"
     response = requests.get(url)
@@ -138,27 +137,5 @@ def get_reviews_from_page(product_id, page):
             reviews.append(review_structure)
         return reviews
     
-def append_product(new_product):
-    file_path = "ceneo_scrapper/app/static/scrapped_product_list.JSON"
-    data = {'products': []}
-    if os.path.exists(file_path):
-        with open(file_path, 'r',encoding='utf-8') as file:
-            data = json.load(file)
-    else:
-        data['products'] = []
-
-    #calculate total cons and pros per product
-    total_pros = sum(len(review['pros']) for review in new_product['reviews'])
-    total_cons = sum(len(review['cons']) for review in new_product['reviews'])
-    new_product['total_pros'] = total_pros
-    new_product['total_cons'] = total_cons
-
-    data['products'].append(new_product)
-
-    with open(file_path, 'w',encoding='utf-8') as file:
-        json.dump(data, file, ensure_ascii=False, indent=4) 
-        file.flush()
-
-
 def show_error(msg):
     return flash(msg)
