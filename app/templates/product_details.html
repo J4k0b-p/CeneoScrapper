@@ -27,8 +27,12 @@
       </tbody>
     </table>
   </div>
-  <div>
-    <button type="button" class="btn btn-sm btn-outline-secondary mx-5" onclick="window.location.href='/products/'">
+  <div class="d-flex flex-row">
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-secondary ms-5 me-2"
+      onclick="window.location.href='/products/'"
+    >
       <img
         class="bi pe-none me-2"
         style="width: 24px; height: 24px"
@@ -36,6 +40,32 @@
     filename='/images/arrow-left.png') }}"
       />
       All products
+    </button>
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-secondary mx-2"
+      onclick="window.location.href='/reviews-download/{{product_id}}'"
+    >
+      <img
+        class="bi pe-none me-2"
+        style="width: 18px; height: 18px"
+        src="{{ url_for('static',
+    filename='/images/download.png') }}"
+      />
+      Reviews Download
+    </button>
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-secondary mx-2"
+      onclick="window.location.href='/product/charts/{{product_id}}'"
+    >
+      <img
+        class="bi pe-none me-2"
+        style="width: 18px; height: 18px"
+        src="{{ url_for('static',
+    filename='/images/charts.png') }}"
+      />
+      Product charts
     </button>
   </div>
 </div>
