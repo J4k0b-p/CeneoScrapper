@@ -64,18 +64,11 @@ def extract_reviews_from_page(product_id, page):
         soup = BeautifulSoup(response.content, 'html.parser')
         user_reviews = soup.find_all('div', class_ = "user-post user-post__card js_product-review")
         for review in user_reviews:
-            review_id = review.get('data-entry-id')
-            author_name = review.find('span', class_ = "user-post__author-name").text
-            try:
-                recomendation = review.find('span', class_ = "user-post__author-recomendation").find('em').text
-            except:
-                recomendation = ""
-            score = review.find('span', class_ = "user-post__score-count").text
-            rate = score.split('/')[0].replace(",",".")
-            try:
-                purchase_confirmation = bool(review.find('div', class_ = "review-pz").find("em").text)
-            except:
-                purchase_confirmation = False
+            review_id = extract_review_id(review)
+            author_name = extract_autor_name(review)
+            recomendation = extract_user_recomendation(review)
+            rate = extract_product_rate(review)
+            purchase_confirmation = extract_purchase_confirmation(review)
 
             dates_span = review.find('span',class_ = "user-post__published").find_all('time')
 
@@ -140,3 +133,40 @@ def extract_reviews_from_page(product_id, page):
     
 def show_error(msg):
     return flash(msg)
+
+def extract_review_id(review):
+    try:
+        review_id = review.get('data-entry-id')
+    except:
+        review_id = ""
+    return review_id
+
+def extract_autor_name(review):
+    try:
+        author_name = review.find('span', class_ = "user-post__author-name").text
+    except:
+        author_name = ""
+    return author_name
+
+def extract_user_recomendation(review):
+    try:
+        recomendation = review.find('span', class_ = "user-post__author-recomendation").find('em').text
+    except:
+        recomendation = ""
+    return recomendation
+
+def extract_product_rate(review):
+    try:
+        score = review.find('span', class_ = "user-post__score-count").text
+        rate = score.split('/')[0].replace(",",".")
+    except:
+        rate = ""
+    return rate
+
+def extract_purchase_confirmation(review):
+    try:
+        purchase_confirmation = bool(review.find('div', class_ = "review-pz").find("em").text)
+    except:
+        purchase_confirmation = False
+
+    return purchase_confirmation
