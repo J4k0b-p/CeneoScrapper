@@ -49,3 +49,10 @@
 .dt-search {
   color: #fff;
 }
+
+.wrapper-autor {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

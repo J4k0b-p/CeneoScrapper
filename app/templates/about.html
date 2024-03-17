@@ -1,0 +1,28 @@
+{% extends 'main.html' %}{% block content %}
+<div
+  class="extraction-container text-bg-dark shadow-sm rounded-4"
+  style="min-height: 80vh; max-width: 70vw; display: flex; justify-content: center; align-items: center"
+>
+  <div class="row g-0" style="max-height: 70vh">
+    <div class="col p-5" style="max-wdith: 50vh">
+      <h2 class="py-4">Jakub Porowski</h2>
+      <p class="pt-4">
+        I am a student of Applied Computer Science at UEK, I chose this field of study because of my interest in general
+        computer science and because of the clear study program that will allow me to work at the same time.I intend to
+        develop into a cloud programmer or project manager in my career. In order to maintain a work life balance in my
+        life i practice swimming and gym.
+      </p>
+      <a class="pt-4" href="https://www.linkedin.com/in/jakub-porowski-116b6a299/">
+        <img src="{{ url_for('static', filename='/images/linkedin.png') }}" width="32" height="32" class="me-4" />
+      </a>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center" style="min-height: 70vh">
+      <img
+        class="my-image rounded-3 shadow-sm"
+        src="{{ url_for('static', filename='/images/my_photo.jpg') }}"
+        style="max-width: 60%; height: auto"
+      />
+    </div>
+  </div>
+</div>
+{% endblock %}

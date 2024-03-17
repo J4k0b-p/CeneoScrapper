@@ -56,5 +56,9 @@ def render_charts_temnplate(product_id):
     dought_script, dought_div = components(dought_chart)
     return render_template('product_charts.html', product_id=product_id, product_name = product_name, bar_script = bar_script, bar_div = bar_div, dought_script = dought_script, dought_div = dought_div)
 
+@app.route('/about-me/')
+def render_about_template():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
