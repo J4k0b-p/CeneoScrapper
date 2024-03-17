@@ -9,7 +9,7 @@ app.secret_key = "hd834!#28HDFGjj"
 
 @app.route('/')
 def render_main_template():
-    return render_template('main.html')
+    return render_template('home.html')
 
 @app.route('/extraction/')
 def render_extraction_template():

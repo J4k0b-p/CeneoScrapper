@@ -1,0 +1,63 @@
+{% extends 'main.html' %}{% block content %}
+<div
+  class="container-fluid d-flex justify-content-center align-items-stretch shadow-sm rounded-4"
+  style="min-height: 80vh; max-width: 70vw"
+>
+  <div class="row g-4 flex-fill" style="max-height: 70vh">
+    <div class="col-6 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 text-bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Application purpose</h5>
+          <p class="card-text">
+            Using the extraction tab after entering the product id from the ceneo website, we are able to download
+            information about the product and its reviews.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 text-bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">How it works?</h5>
+          <p class="card-text">
+            By specifying the product id in the extraction tab, the application checks whether the product exists. if
+            so, it proceeds to extract the data. The data is saved in json format, so that it can be easily processed
+            later. In the products tab we will see the tabs with the products that have been extracted. Each of the
+            products has a tab with details and charts. In the details tab you will see a table with all the information
+            about the product. going to the charts tab you will see two charts, pie chart and column chart.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 text-bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Used packages</h5>
+          <ul>
+            <li>Flask</li>
+            <li>Requests</li>
+            <li>Bokeh</li>
+            <li>Pandas</li>
+            <li>Math</li>
+            <li>Datatables</li>
+            <li>Beautiful Soup</li>
+            <li>Json</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 d-flex align-items-stretch">
+      <div class="card shadow-sm w-100 text-bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Used approaches</h5>
+          <ul>
+            <li>KISS (Keep It Simple, Stupid)</li>
+            <li>DRY (Don't Repeat Yourself)</li>
+            <li>Trial and error method</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

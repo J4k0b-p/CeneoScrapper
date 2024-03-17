@@ -1,7 +1,7 @@
 {% extends 'main.html' %} {% block content %}
 <div class="products-wrapper" style="min-height: 90%; min-width: 90%">
   <div class="album py-5">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-2 justify-content-start">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 justify-content-start">
       {% for product in data['products'] %}
       <div class="col custom-col" id="{{ product['product_id'] }}">
         <div class="card fixed-width shadow-sm text-bg-dark">
