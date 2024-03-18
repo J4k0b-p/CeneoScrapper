@@ -42,7 +42,7 @@ def extract_main_product_info(product_id,response):
     product_image_src = product_el['src']
     reviews = reviews_amount.split()
 
-    product_structure["product_name"] = product_name_div
+    product_structure["product_name"] = product_name_div.strip()
     product_structure["product_id"] = product_id
     product_structure["product_image_src"] = product_image_src
     product_structure["reviews_amount"] = reviews[0]

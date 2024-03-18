@@ -16,7 +16,6 @@ $(document).ready(function () {
       { width: "5%" }, // Stars
       { width: "10%" }, // Review Date
       { width: "55%" } // Content
-      // Add or remove columns as needed, ensuring the total does not exceed 100%
     ]
   });
 });

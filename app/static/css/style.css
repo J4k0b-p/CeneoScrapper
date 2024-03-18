@@ -38,21 +38,14 @@
 
 .custom-light-table th,
 .custom-light-table td {
-  background-color: #212529; /* White background */
-  color: #fff; /* Bootstrap's default dark gray for text */
+  background-color: #212529;
+  color: #fff;
 }
 
 .custom-light-table thead th {
-  background-color: #f8f9fa; /* Slightly darker background for the table header */
+  background-color: #f8f9fa;
 }
 .dt-info,
 .dt-search {
   color: #fff;
-}
-
-.wrapper-autor {
-  max-width: 1320px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }

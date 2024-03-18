@@ -9,13 +9,13 @@
             <img
               class="bd-placeholder-img card-img-top d-block mx-auto"
               src="https:{{ product['product_image_src'] }}"
-              alt="{{ product['product_name'].strip()  }}"
+              alt="{{ product['product_name']  }}"
             />
           </div>
           <div class="card-body d-flex flex-column justify-content-between">
             <div>
               <a href="https://www.ceneo.pl/{{ product['product_id'] }}" style="text-decoration: none; color: inherit">
-                <h3 class="card-title">{{ product['product_name'].strip() }}</h3>
+                <h3 class="card-title">{{ product['product_name'] }}</h3>
               </a>
               <p class="card-text">
                 This product has an average review score of {{ product['reviews_avg_score'] }} based on {{
