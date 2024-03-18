@@ -4,9 +4,9 @@
             "product_name": "\nTelewizor Samsung QE55Q60C\n",
             "product_id": "151628244",
             "product_image_src": "//image.ceneostatic.pl/data/products/151628244/f-samsung-qe55q60c.jpg",
-            "reviews_amount": "40",
+            "reviews_amount": "41",
             "reviews_avg_score": "4.88",
-            "user_reviews_pages_amount": 4,
+            "user_reviews_pages_amount": 5,
             "reviews": [
                 {
                     "review_id": "18350169",
@@ -274,6 +274,25 @@
                     "helpful_count": "0",
                     "not_helpful_count": "0",
                     "content": "Telewizor odbiera bez zarzutu, jedyna wada to nóżki mało stabilne. Dokupiliśmy w internecie nóżki metalowe, które dodają mu więcej elegancji i stabilności.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18498799",
+                    "author": "\nd...i",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-03-18 07:55:36",
+                    "purchase_date": "2024-03-11 09:27:36",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "System Tizen jest dużo szybszy i intuicyjny niż Android TV, dzięki temu obsługa telewizora jest też bardzo przyjemna. ",
                     "cons": [],
                     "pros": [
                         "jakość dźwięku",
@@ -705,7 +724,734 @@
                     ]
                 }
             ],
-            "total_pros": 102,
+            "total_pros": 106,
+            "total_cons": 4
+        },
+        {
+            "product_name": "\nTelewizor Samsung QE55Q60C\n",
+            "product_id": "151628244",
+            "product_image_src": "//image.ceneostatic.pl/data/products/151628244/f-samsung-qe55q60c.jpg",
+            "reviews_amount": "41",
+            "reviews_avg_score": "4.88",
+            "user_reviews_pages_amount": 5,
+            "reviews": [
+                {
+                    "review_id": "18350169",
+                    "author": "d...z",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-30 10:53:30",
+                    "purchase_date": "2024-01-19 15:06:42",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Jak na moje potrzeby to bardzo dobry TV. Naczytałem się w internecie o telewizorach, naoglądałem różnych testów i można zgłupieć i nie wiedzieć co wybrać. Ja oglądam telewizję sporadycznie i głównie między 19.00 - 23.00. Jeden opis był najbardziej trafny i bardzo mi się spodobał. Wybrałem VW Golf zamiast Mercedesa. I bardzo dobrze zrobiłem. Jak się zepsuje za 2 lata to będę miał już kasę na drugi telewizor tej samej klasy. A i zapytałem w Samsungu czym różni się wersja Q60C od Q67C? Okazuje się, że niczym (może wyglądem). A różnica w cenie 700 PLN na korzyść wersji 60.",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18139398",
+                    "author": "z...y",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-11-26 18:58:40",
+                    "purchase_date": "2023-11-14 13:15:16",
+                    "helpful_count": "1",
+                    "not_helpful_count": "0",
+                    "content": "W tej cenie istny wypas, wszystko git. Smart śmiga, appki działają, nie ma się czego czepić.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18277897",
+                    "author": "m...9",
+                    "recommendation": "",
+                    "rate": "3",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-05 13:24:45",
+                    "purchase_date": "2023-12-29 14:21:50",
+                    "helpful_count": "0",
+                    "not_helpful_count": "1",
+                    "content": "Z samego telewizora jestem natomiast zadowolony umiarkowanie i nie wiem czy to był dobry wybór. Przeglądając w sklepie telewizory, odniosłem wrażenie, że jakikolwiek UHD odbiera lepiej od mojego QLED. Być może to kwestia połączenia internetowego, może ustawień czy kalibracji, choć wszystko zrobiłem zgodnie z zaleceniami. Kupowanie w sklepie internetowym ma swoje zalety- niższa cena, ale jeśli coś nie gra, wtedy zakup w sklepie stacjonarnym ma niezaprzeczalną przewagę. Oczywiście sklep internetowy nie ponosi tutaj żadnej winy, bo jest jedynie dystrybutorem sprzętu. Niestety, tabelka z cechami pokazuje jedynie ekstremalne wartości. Obraz oceniłbym na 5 w skali 0-12, dźwięk na 9 w tej samej skali, łatwość obsługi na 8, wygląd zaś to ocena maksymalna, bo tv wygląda ładnie.",
+                    "cons": [
+                        "jakość obrazu"
+                    ],
+                    "pros": [
+                        "jakość dźwięku",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18281893",
+                    "author": "m...r",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-08 08:58:12",
+                    "purchase_date": "2023-12-27 20:48:57",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Witam.Telewizor użytkuje od dwóch tygodni jestem bardzo zadowolony.Dla mnie Super👍.\nPozdrawiam.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18138085",
+                    "author": "pwlodarczyk85*****",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-11-25 16:48:54",
+                    "purchase_date": "2023-11-21 06:15:16",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Super jakość obrazu i dźwięku w bardzo niskiej cenie .",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18187157",
+                    "author": "z...3",
+                    "recommendation": "Polecam",
+                    "rate": "4",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-08 08:25:27",
+                    "purchase_date": "2023-11-29 20:54:36",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Jestem zadowolona, trochę problemu z pilotem",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "17986915",
+                    "author": "a...k",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-10-10 18:50:35",
+                    "purchase_date": "2023-09-28 12:29:28",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Obraz, dźwięk i funkcje super.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18401112",
+                    "author": "a...5",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-15 09:16:20",
+                    "purchase_date": "2024-01-23 19:52:32",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Mega obraz za dobrą cenę",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18310620",
+                    "author": "m...9",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-17 09:39:29",
+                    "purchase_date": "2024-01-09 19:01:24",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo dobry",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18215153",
+                    "author": "Grzegorz",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-15 13:48:10",
+                    "purchase_date": "2023-12-04 12:15:28",
+                    "helpful_count": "0",
+                    "not_helpful_count": "1",
+                    "content": "za wcześnie na ocenę",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18214201",
+                    "author": "t...2",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-15 10:45:14",
+                    "purchase_date": "2023-11-25 22:00:41",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Super",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18298302",
+                    "author": "p...s",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-12 13:27:05",
+                    "purchase_date": "2024-01-07 16:19:51",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "OK",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "17820164",
+                    "author": "k...u",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-08-21 08:10:13",
+                    "purchase_date": "2023-08-03 17:50:55",
+                    "helpful_count": "1",
+                    "not_helpful_count": "2",
+                    "content": "Telewizor Samsung MEGA! Kupiłam 1,5r temu LG 50cali, ale jednak był to za duży tv do pokoju, sprzedałam i kupiłam Samsung 43cali i jestem niesamowicie zadowolona że zrobiłam taką podmiankę! Tv jest genialny, przepiękny obraz, wizualnie prezentuje się tak elegancko bo jest cieniutki, ramki minimalne, a pilot rewelacyjny! Ten zakup to strzał w 10 :) Bardzo Polecam!",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18101442",
+                    "author": "f...p",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-11-15 16:57:58",
+                    "purchase_date": "2023-10-15 19:23:37",
+                    "helpful_count": "0",
+                    "not_helpful_count": "1",
+                    "content": "Po miesiącu użytkowania stwierdzam, że telewizor jest jak najbardziej w porządku. Do jego obsługi trzeba się przyzwyczaić - ustawienia są poukrywane w różnych miejscach, ale po jakimś czasie można się przyzwyczaić. Na plus sporo możliwości konfiguracji. Czernie czarne, kolory wyraźne, głos nadspodziewanie mocny i czysty. Polecam.",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18326434",
+                    "author": "Kuba",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-22 19:02:06",
+                    "purchase_date": "2024-01-18 22:10:18",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Telewizor mam od dzisiaj i sprawuje się bardzo dobrze obraz dobry tak jak dźwięk obsługa bardzo latwa a pilot nie jest skomplikowany mały i prosty w obsłudze",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18322095",
+                    "author": "b...1",
+                    "recommendation": "Polecam",
+                    "rate": "4.5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-20 11:03:51",
+                    "purchase_date": "2024-01-08 11:14:39",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Telewizor odbiera bez zarzutu, jedyna wada to nóżki mało stabilne. Dokupiliśmy w internecie nóżki metalowe, które dodają mu więcej elegancji i stabilności.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18498799",
+                    "author": "d...i",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-03-18 07:55:36",
+                    "purchase_date": "2024-03-11 09:27:36",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "System Tizen jest dużo szybszy i intuicyjny niż Android TV, dzięki temu obsługa telewizora jest też bardzo przyjemna.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18258978",
+                    "author": "B...g",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-29 20:33:57",
+                    "purchase_date": "2023-12-13 11:30:13",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "TV super   polecam  łatwy w obsłudze i szybko działa i ma dużo różnych opcji   telewizor jak komputer",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18332055",
+                    "author": "j...0",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-24 09:12:40",
+                    "purchase_date": "2024-01-17 18:26:31",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo dobra jakość wszystkich parametrów opis urządzenia nie jest przesadzony\nPolecam",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18436122",
+                    "author": "s...2",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-26 10:24:54",
+                    "purchase_date": "2024-02-19 14:00:28",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Jak na razie spisuje się bez zarzutu, prosty instalacji  jak i w obsłudze",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18283331",
+                    "author": "c...0",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-08 18:04:59",
+                    "purchase_date": "2023-12-07 15:38:45",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Pierwszy miesiąc użytkowania bardzo mnie zadowolił z wyboru tego modelu.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18287214",
+                    "author": "a...z",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-10 08:07:42",
+                    "purchase_date": "2023-12-27 09:31:12",
+                    "helpful_count": "0",
+                    "not_helpful_count": "1",
+                    "content": "Dla mnie ok, 43 cale w zupełności wystarcza, no i ten QLED, obraz fantastic !",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "17811671",
+                    "author": "s...n",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-08-17 11:45:31",
+                    "purchase_date": "2023-07-24 20:46:36",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "szybkość działania, łatwość obsługi, pilot z ogniwem solarnym",
+                    "cons": [
+                        "jakość dźwięku"
+                    ],
+                    "pros": [
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "17850305",
+                    "author": "p...m",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-08-30 08:24:48",
+                    "purchase_date": "2023-08-19 18:58:10",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo dobra jakość przy takiej cenie polecam!!!!!",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18459888",
+                    "author": "k...1",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-03-04 21:06:22",
+                    "purchase_date": "2024-02-01 22:54:03",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "samsung to firma z klasa i jakoscia bardzo dobra",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18358555",
+                    "author": "k...i",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-01 13:34:03",
+                    "purchase_date": "2024-01-27 13:28:01",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "O.K ale trudno ocenic po kilku dniach uzywania",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18372885",
+                    "author": "p...m",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-06 16:45:22",
+                    "purchase_date": "2024-01-25 17:57:05",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "....obraz żyleta...z sounbarem dobry dźwięk.",
+                    "cons": [
+                        "jakość dźwięku",
+                        "łatwość obsługi"
+                    ],
+                    "pros": [
+                        "jakość obrazu",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18444964",
+                    "author": "s...f",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-28 11:37:36",
+                    "purchase_date": "2024-02-22 18:00:38",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Polecam. Stosunek jakości do ceny super",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18382977",
+                    "author": "m...l",
+                    "recommendation": "Polecam",
+                    "rate": "4",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-09 08:40:47",
+                    "purchase_date": "2024-01-29 21:42:53",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Dobry stosunek ceny do jakosci",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "17904087",
+                    "author": "p...m",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-09-15 08:27:29",
+                    "purchase_date": "2023-08-19 19:01:24",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Polecam wart takich pieniędzy",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18365911",
+                    "author": "d...2",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-05 07:52:59",
+                    "purchase_date": "2024-01-16 22:25:16",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo fajny TV - za tą kasę",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18292092",
+                    "author": "m...r",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-11 08:21:37",
+                    "purchase_date": "2023-12-27 12:30:09",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Super jakość obrazu polecam",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "17891865",
+                    "author": "m...8",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-09-12 08:53:53",
+                    "purchase_date": "2023-08-20 16:48:39",
+                    "helpful_count": "1",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo dobry TV.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18359676",
+                    "author": "z...i",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-02-01 21:39:24",
+                    "purchase_date": "2024-01-20 19:43:47",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "pierwsza liga za ta kasę",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18224866",
+                    "author": "k...5",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-19 11:43:07",
+                    "purchase_date": "2023-12-13 18:10:34",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Dobrej jakości produkt",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18320541",
+                    "author": "n...a",
+                    "recommendation": "Polecam",
+                    "rate": "4.5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-19 14:06:50",
+                    "purchase_date": "2024-01-10 23:23:40",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo fajny tv.",
+                    "cons": [],
+                    "pros": []
+                },
+                {
+                    "review_id": "18348943",
+                    "author": "D...e",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-30 08:25:11",
+                    "purchase_date": "2023-12-12 09:07:19",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Super Polecam !",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18215767",
+                    "author": "m...s",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-15 17:03:33",
+                    "purchase_date": "2023-12-11 13:23:37",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Wszystko OK.",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18228338",
+                    "author": "andkrys*****",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-20 09:52:11",
+                    "purchase_date": "2023-12-09 21:35:32",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Bardzo dobry",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18178926",
+                    "author": "t...a",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2023-12-06 11:56:14",
+                    "purchase_date": "2023-11-27 18:19:19",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "Jakość  Ok",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                },
+                {
+                    "review_id": "18294252",
+                    "author": "r...f",
+                    "recommendation": "Polecam",
+                    "rate": "5",
+                    "is_purchase_confirmed": true,
+                    "review_date": "2024-01-11 13:45:29",
+                    "purchase_date": "2024-01-05 18:02:26",
+                    "helpful_count": "0",
+                    "not_helpful_count": "0",
+                    "content": "ok",
+                    "cons": [],
+                    "pros": [
+                        "jakość dźwięku",
+                        "jakość obrazu",
+                        "łatwość obsługi",
+                        "wygląd"
+                    ]
+                }
+            ],
+            "total_pros": 106,
             "total_cons": 4
         }
     ]

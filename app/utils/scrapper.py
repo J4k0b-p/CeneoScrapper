@@ -55,7 +55,6 @@ def extract_main_product_info(product_id,response):
 def get_reviews_pages_amount(amount):
     return math.ceil(int(amount) / 10)
 
-#spaghetti code  -- REFACTOR NEEDED
 def extract_reviews_from_page(product_id, page):
     reviews = []
     url = f"https://www.ceneo.pl/{product_id}/opinie-{page}"
@@ -69,57 +68,18 @@ def extract_reviews_from_page(product_id, page):
             recomendation = extract_user_recomendation(review)
             rate = extract_product_rate(review)
             purchase_confirmation = extract_purchase_confirmation(review)
-
-            dates_span = review.find('span',class_ = "user-post__published").find_all('time')
-
-            if len(dates_span) >= 2:
-                reviev_date = dates_span[0]['datetime']
-                purchase_date = dates_span[1]['datetime']
-
-            else:
-                reviev_date = dates_span[0]['datetime']               
-                purchase_date = ""
-
-            
-            helpful_count = review.find('button', class_ = "vote-yes js_product-review-vote js_vote-yes")['data-total-vote']
-            not_helpful_count = review.find('button', class_ = "vote-no js_product-review-vote js_vote-no")['data-total-vote']
-
-            user_review = review.find('div', class_ = "user-post__text").text
-
-            review_feature_col = review.findAll('div', class_="review-feature__col")
-            
-            try:
-                cons_list, pros_list = [], []
-                if len(review_feature_col) == 1:
-                    is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
-                    if is_pros_check:
-                        pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
-                        pros_list = [div.text for div in pros_divs ]
-                       
-                    else:
-                        cons_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
-                        cons_list = [div.text for div in cons_divs ]
-                        
-                elif len(review_feature_col) == 2:
-                    is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
-                    if is_pros_check:
-                        pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
-                        pros_list = [div.text for div in pros_divs ]
-                        
-                        cons_divs =  review_feature_col[1].findAll('div', class_='review-feature__item')
-                        cons_list = [div.text for div in cons_divs ]
-                        
-            except:
-                # There is no cons_pros_list element
-                pass
-
+            review_date, purchase_date = extract_dates(review)
+            helpful_count = extract_helpfull_count(review)
+            not_helpful_count = extract_not_helpfull_count(review)
+            user_review = extract_user_review(review)
+            pros_list,cons_list = extract_cons_pros_list(review)
             review_structure = {
                 "review_id": review_id,
                 "author": author_name,
                 "recommendation": recomendation,
                 "rate": rate,
                 "is_purchase_confirmed": purchase_confirmation,
-                "review_date": reviev_date,
+                "review_date": review_date,
                 "purchase_date": purchase_date,
                 "helpful_count": helpful_count,
                 "not_helpful_count": not_helpful_count,
@@ -146,7 +106,7 @@ def extract_autor_name(review):
         author_name = review.find('span', class_ = "user-post__author-name").text
     except:
         author_name = ""
-    return author_name
+    return author_name.strip()
 
 def extract_user_recomendation(review):
     try:
@@ -170,3 +130,65 @@ def extract_purchase_confirmation(review):
         purchase_confirmation = False
 
     return purchase_confirmation
+
+def extract_dates(review):
+    dates_span = review.find('span',class_ = "user-post__published").find_all('time')
+
+    if len(dates_span) >= 2:
+        review_date = dates_span[0]['datetime']
+        purchase_date = dates_span[1]['datetime']
+    else:
+        review_date = dates_span[0]['datetime']               
+        purchase_date = ""
+    
+    return review_date, purchase_date
+
+def extract_helpfull_count(review):
+    try:
+        helpfull_count = review.find('button', class_ = "vote-yes js_product-review-vote js_vote-yes")['data-total-vote']
+    except:
+        helpfull_count = ""
+    
+    return helpfull_count
+
+def extract_not_helpfull_count(review):
+    try:
+        not_helpfull_count = review.find('button', class_ = "vote-no js_product-review-vote js_vote-no")['data-total-vote']
+    except:
+        not_helpfull_count = ""
+    
+    return not_helpfull_count
+
+def extract_user_review(review):
+    try:
+        user_review = review.find('div', class_ = "user-post__text").text
+    except:
+        user_review = ""
+    
+    return user_review.strip()
+
+def extract_cons_pros_list(review):
+    review_feature_col = review.findAll('div', class_="review-feature__col")
+    try:
+        cons_list, pros_list = [], []
+        if len(review_feature_col) == 1:
+            is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
+            if is_pros_check:
+                pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
+                pros_list = [div.text for div in pros_divs ] 
+            else:
+                cons_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
+                cons_list = [div.text for div in cons_divs ]
+                        
+        elif len(review_feature_col) == 2:
+            is_pros_check = bool(review_feature_col[0].find('div', class_='review-feature__title review-feature__title--positives'))
+            if is_pros_check:
+                pros_divs =  review_feature_col[0].findAll('div', class_='review-feature__item')
+                pros_list = [div.text for div in pros_divs ]
+                        
+                cons_divs =  review_feature_col[1].findAll('div', class_='review-feature__item')
+                cons_list = [div.text for div in cons_divs ]                     
+    except:
+        # There is no cons_pros_list element
+        pass
+    return pros_list, cons_list
